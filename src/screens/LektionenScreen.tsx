@@ -10,19 +10,43 @@ export const LektionenScreen = () => {
 
   useEffect( () => {
     navigator.setOptions({
-      title: 'Lektionen',
-      headerBackTitle: 'Atrás'
+      title: 'Lektionen'
     })
   }, [])
 
   return (
     <View style={ styles.globalMargin}>
-        <Text style={ styles.title}> Lektionen </Text>
+      <Text style={ styles.title}> Körpersprache</Text>
+      <Button 
+        title= 'Übungen'
+        onPress={() => navigator.navigate('Körpersprache')}
+      />
 
-        <Button 
-          title= 'Ir a Kontakt'
-          onPress={() => navigator.navigate('Kontakt')}
-        />
+      <Text style={ styles.title}> Atmung </Text>
+      <Button 
+        title= 'Übungen'
+        onPress={() => navigator.navigate('Atmung')}
+      />
+
+      <Text style={ styles.title}> Stimme </Text>
+      <Button 
+        title= 'Übungen'
+        onPress={() => navigator.navigate('Stimme')}
+      />
+
+      <Text style={ styles.title}> Sprechtechnik </Text>
+      <Button 
+        title= 'Übungen'
+        onPress={() => navigator.navigate('Sprechtechnik')}
+      />
+
+      <Text style={ styles.title}> Kommunikation </Text>
+      <Button 
+        title= 'Übungen'
+        onPress={() => navigator.navigate('Kommunikation')}
+      />
+
+
     </View>
   )
 }

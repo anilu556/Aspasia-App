@@ -10,39 +10,25 @@ export const AspasiaScreen = ( { navigation }:Props) => {
   return (
     <View style={ styles.globalMargin } >
       <Text style={ styles.title}> Aspasia</Text>
+      <Text>ASPASIA</Text>
+      <Text>Rhetorikübungen</Text>
+      <Text>Description</Text>
+      <Text>ASPASIA</Text>
+      <Text> 
+      Rhetorikübungen - dein tägliches Übungsprogramm für einen souveränen Auftritt.
+      In dieser App findest du Übungen zur Körpersprache, Stimme und Sprechtechnik.
+      </Text>
+      
+      <Button
+        title= 'Kontakt'
+        onPress={ () => navigation.navigate('Kontakt')}
+      />
 
-        <Button
-          title= 'Ir a Lektionen'
-          onPress={ () => navigation.navigate('Lektionen')}
-        />
+      <Button
+        title= 'Lektionen'
+        onPress={ () => navigation.navigate('Lektionen')}
+      />
 
-        <Text>Navegar con argumentos</Text>
-
-        <View style = {{flexDirection: 'row'}}>
-          <TouchableOpacity
-            style = {styles.botonGrande}
-            onPress={ () => navigation.navigate('PersonaScreen', {
-              id: 1,
-              nombre: 'Pedro'
-            })}
-          >
-            <Text style = { styles.botonGrandeTexto}>Pedro</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style = {styles.botonGrande}
-            onPress={ () => navigation.navigate('PersonaScreen', {
-              id: 2,
-              nombre: 'María'
-            })}
-          >
-            <Text style = { styles.botonGrandeTexto}>María</Text>
-          </TouchableOpacity>
-        </View>
-        {/* <Button 
-          title= 'Ir persona'
-          onPress={ () => navigation.navigate('PersonaScreen')}
-        /> */}
     </View>
   )
 }

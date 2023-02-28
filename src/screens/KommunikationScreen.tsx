@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-export const KontaktScreen = () => {
+export const KommunikationScreen = () => {
   return (
     <View>
-      <Text>Kontakt</Text>
+      <Text>Kommunikation</Text>
     </View>
   )
 }
