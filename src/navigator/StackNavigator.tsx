@@ -9,24 +9,16 @@ import { StimmeScreen } from '../screens/StimmeScreen';
 import { SprechtechnikScreen } from '../screens/SprechtechnikScreen';
 import { KommunikationScreen } from '../screens/KommunikationScreen';
 
-export type RootStackParams = {
-  Aspasia: undefined,
-  Kontakt: undefined,
-  Lektionen: undefined,
-  Körpersprache: undefined,
-  Atmung: undefined,
-  Stimme: undefined,
-  Sprechtechnik: undefined,
-  Kommunikation: undefined
-}
-
-const Stack = createStackNavigator<RootStackParams>();
+const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Aspasia" component={AspasiaScreen} />
-      <Stack.Screen name="Kontakt" component={KontaktScreen} />
+    <Stack.Navigator
+    screenOptions={{
+      cardStyle: { backgroundColor: 'white' },
+      headerShadowVisible: false
+    }}  
+    >
       <Stack.Screen name="Lektionen" component={LektionenScreen} />
       <Stack.Screen name="Körpersprache" component={KorperspracheScreen} />
       <Stack.Screen name="Atmung" component={AtmungScreen} />
